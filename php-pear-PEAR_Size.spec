@@ -6,12 +6,12 @@
 Summary:	%{_pearname} - determine and list how much filespace each installed package consumes
 Summary(pl.UTF-8):	%{_pearname} - narzędzie do określania miejsca zajmowanego przez zainstalowane klasy PEAR
 Name:		php-pear-%{_pearname}
-Version:	0.1.4
+Version:	0.1.6
 Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	1cd74f4e87bcb65dd9e5e4f1fc09b6a5
+# Source0-md5:	4aed4f2717dd33fa51b87277171e44be
 URL:		http://pear.php.net/package/PEAR_Size/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -37,6 +37,20 @@ postaci kanałów.
 
 Ta klasa ma w PEAR status: %{_status}.
 
+%package tests
+Summary:	Tests for PEAR::%{_pearname}
+Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
+Group:		Development/Languages/PHP
+AutoReq:	no
+Requires:	%{name} = %{epoch}:%{version}-%{release}
+AutoProv:	no
+
+%description tests
+Tests for PEAR::%{_pearname}.
+
+%description tests -l pl.UTF-8
+Testy dla PEAR::%{_pearname}.
+
 %prep
 %pear_package_setup
 
@@ -57,3 +71,7 @@ rm -rf $RPM_BUILD_ROOT
 %{php_pear_dir}/PEAR/Command/*
 %{php_pear_dir}/PEAR/Size
 %{php_pear_dir}/PEAR/Size.php
+
+%files tests
+%defattr(644,root,root,755)
+%{php_pear_dir}/tests/%{_pearname}
