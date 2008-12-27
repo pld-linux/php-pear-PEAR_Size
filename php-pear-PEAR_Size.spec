@@ -6,12 +6,12 @@
 Summary:	%{_pearname} - determine and list how much filespace each installed package consumes
 Summary(pl.UTF-8):	%{_pearname} - narzędzie do określania miejsca zajmowanego przez zainstalowane klasy PEAR
 Name:		php-pear-%{_pearname}
-Version:	0.1.8
+Version:	0.1.9
 Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	22b8d7d67e041d919525fb75db4569ec
+# Source0-md5:	e3e1a91a797e87f45f7b41531abecb70
 URL:		http://pear.php.net/package/PEAR_Size/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -65,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc install.log docs/PEAR_Size/{docs/script-usage.txt,TODO}
+%doc install.log docs/PEAR_Size/docs/script-usage.txt
 %{php_pear_dir}/.registry/*.reg
 %attr(755,root,root) %{_bindir}/pearsize
 %{php_pear_dir}/PEAR/Command/*
