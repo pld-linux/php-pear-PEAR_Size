@@ -1,19 +1,17 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		PEAR
-%define		_subclass	Size
-%define		_status		alpha
+%define		_status		beta
 %define		_pearname	PEAR_Size
 Summary:	%{_pearname} - determine and list how much filespace each installed package consumes
 Summary(pl.UTF-8):	%{_pearname} - narzędzie do określania miejsca zajmowanego przez zainstalowane klasy PEAR
 Name:		php-pear-%{_pearname}
 Version:	0.2.0
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	54d8d5cd061e1866459d072d90f4f587
 URL:		http://pear.php.net/package/PEAR_Size/
-BuildRequires:	php-pear-PEAR
+BuildRequires:	php-pear-PEAR >= 1:1.4.0
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 Requires:	php-pear-Console_Getargs >= 1.3.4
