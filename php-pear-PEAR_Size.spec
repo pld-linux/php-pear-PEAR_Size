@@ -5,7 +5,7 @@ Summary:	%{_pearname} - determine and list how much filespace each installed pac
 Summary(pl.UTF-8):	%{_pearname} - narzędzie do określania miejsca zajmowanego przez zainstalowane klasy PEAR
 Name:		php-pear-%{_pearname}
 Version:	0.2.0
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
