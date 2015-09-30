@@ -1,3 +1,5 @@
+# TODO
+# - make it actually work with pld pear packaging (lots of file not found errors)
 %define		subver		RC1
 %define		rel			1
 %define		status		beta
