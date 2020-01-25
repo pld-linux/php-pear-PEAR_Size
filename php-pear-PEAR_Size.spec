@@ -4,7 +4,6 @@
 %define		rel			1
 %define		status		beta
 %define		pearname	PEAR_Size
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - determine and list how much filespace each installed package consumes
 Summary(pl.UTF-8):	%{pearname} - narzędzie do określania miejsca zajmowanego przez zainstalowane klasy PEAR
 Name:		php-pear-%{pearname}
